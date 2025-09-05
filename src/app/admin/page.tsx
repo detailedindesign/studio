@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ManageResources } from "@/components/admin/manage-resources";
+import { ManageUsers } from "@/components/admin/manage-users";
 
 export default function AdminPage() {
   return (
@@ -9,17 +10,7 @@ export default function AdminPage() {
             <p className="text-muted-foreground">Manage the content and settings of the application.</p>
         </div>
 
-      <section>
-        <Card>
-          <CardHeader>
-            <CardTitle>Manage Users</CardTitle>
-            <CardDescription>Edit user profiles and caregiver information.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">User management forms will go here.</p>
-          </CardContent>
-        </Card>
-      </section>
+      <ManageUsers />
 
        <section>
         <Card>
