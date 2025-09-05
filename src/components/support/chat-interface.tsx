@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useRef, useState, useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { askQuestion, FormState } from "@/app/support/actions";
 import { Bot, User, CornerDownLeft, CircleSlash, Loader2, Mic, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -29,7 +29,7 @@ function SubmitButton() {
 }
 
 export function ChatInterface() {
-  const [state, formAction] = useFormState(askQuestion, initialState);
+  const [state, formAction] = useActionState(askQuestion, initialState);
   const [messages, setMessages] = useState<Message[]>([]);
   const formRef = useRef<HTMLFormElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
