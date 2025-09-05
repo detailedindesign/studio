@@ -1,6 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ManageResources } from "@/components/admin/manage-resources";
 import { ManageUsers } from "@/components/admin/manage-users";
+import { ManageReminders } from "@/components/admin/manage-reminders";
 
 export default function AdminPage() {
   return (
@@ -11,19 +11,7 @@ export default function AdminPage() {
         </div>
 
       <ManageUsers />
-
-       <section>
-        <Card>
-          <CardHeader>
-            <CardTitle>Manage Reminders</CardTitle>
-             <CardDescription>View, edit, or delete existing reminders.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">A table or list of reminders will go here.</p>
-          </CardContent>
-        </Card>
-      </section>
-      
+      <ManageReminders />
       <ManageResources />
     </div>
   );
