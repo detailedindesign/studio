@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { PlusCircle } from "lucide-react";
+import { ManageResources } from "@/components/admin/manage-resources";
 
 export default function AdminPage() {
   return (
@@ -23,15 +22,9 @@ export default function AdminPage() {
       </section>
 
        <section>
-        <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Manage Reminders</h2>
-            <Button>
-                <PlusCircle className="mr-2 h-4 w-4" /> Add Reminder
-            </Button>
-        </div>
         <Card>
           <CardHeader>
-            <CardTitle>Current Reminders</CardTitle>
+            <CardTitle>Manage Reminders</CardTitle>
              <CardDescription>View, edit, or delete existing reminders.</CardDescription>
           </CardHeader>
           <CardContent>
@@ -40,23 +33,7 @@ export default function AdminPage() {
         </Card>
       </section>
       
-      <section>
-        <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Manage Resources</h2>
-            <Button>
-                <PlusCircle className="mr-2 h-4 w-4" /> Add Resource
-            </Button>
-        </div>
-        <Card>
-          <CardHeader>
-            <CardTitle>Resource Library</CardTitle>
-            <CardDescription>Add, edit, or remove articles from the library.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">A table or list of resources will go here.</p>
-          </CardContent>
-        </Card>
-      </section>
+      <ManageResources />
     </div>
   );
 }
