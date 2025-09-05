@@ -32,6 +32,13 @@ export type Reminder = {
   status: 'Taken' | 'Upcoming' | 'Missed';
 };
 
+export type Resource = {
+  id: string;
+  title: string;
+  description: string;
+  category: 'Condition Specific' | 'Caregiver Support' | 'Legal & Benefits';
+};
+
 export const user: User = {
   name: "Arthur Pendragon",
   avatarUrl: "https://picsum.photos/seed/arthur/100",
@@ -63,3 +70,42 @@ export const location = {
   address: "123 Maple Street, Springfield",
   consent: true,
 };
+
+export const resources: Resource[] = [
+    {
+        id: '1',
+        title: 'Managing Diabetes: A Comprehensive Guide',
+        description: 'Learn about diet, exercise, and medication management for type 2 diabetes.',
+        category: 'Condition Specific',
+    },
+    {
+        id: '2',
+        title: 'Preventing Caregiver Burnout',
+        description: 'Tips and strategies for managing stress and finding support as a caregiver.',
+        category: 'Caregiver Support',
+    },
+    {
+        id: '3',
+        title: 'Navigating Medicare and Medicaid',
+        description: 'Understand the essentials of health coverage options for seniors.',
+        category: 'Legal & Benefits',
+    },
+    {
+        id: '4',
+        title: 'Understanding Alzheimer\'s Disease',
+        description: 'An introductory guide to the stages, symptoms, and care strategies for Alzheimer\'s.',
+        category: 'Condition Specific',
+    },
+    {
+        id: '5',
+        title: 'Financial Planning for Long-Term Care',
+        description: 'Explore options for funding future health and living needs.',
+        category: 'Legal & Benefits',
+    },
+    {
+        id: '6',
+        title: 'Building a Support Network',
+        description: 'How to connect with other caregivers and find local resources.',
+        category: 'Caregiver Support',
+    }
+];

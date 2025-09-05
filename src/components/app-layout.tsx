@@ -18,6 +18,7 @@ import {
   Bell,
   CalendarClock,
   User,
+  BookOpen,
 } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -30,6 +31,7 @@ const navItems = [
   { href: "/support", icon: Bot, label: "AutoSupport AI" },
   { href: "/reminders", icon: CalendarClock, label: "Reminders" },
   { href: "/alerts", icon: Bell, label: "Alerts" },
+  { href: "/resources", icon: BookOpen, label: "Resource Library" },
 ];
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
@@ -41,6 +43,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       case '/support': return 'AutoSupport AI';
       case '/reminders': return 'Medication & Reminders';
       case '/alerts': return 'Alerts & Notifications';
+      case '/resources': return 'Resource Library';
       case '/profile': return 'Profile & Settings';
       default: return 'Connected Independence Suite';
     }
