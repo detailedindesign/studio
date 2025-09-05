@@ -22,11 +22,8 @@ export function ManageUsers() {
   const [user, setUser] = React.useState(initialUser);
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
-  // In a real app, you would handle form submission to an API
   const handleSaveChanges = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // This is where you would get form data and call an API
-    // For now, we just log it and close the dialog
     console.log("Form submitted");
     setIsDialogOpen(false);
   };
@@ -80,7 +77,8 @@ export function ManageUsers() {
                                  <Input id="userAvatar" defaultValue={user.avatarUrl} className="col-span-3" />
                             </fieldset>
                              <fieldset className="grid grid-cols-4 items-center gap-4 border p-4 rounded-md">
-                                <legend className="px-1 text-sm font-medium text-muted-foreground">Caregiver Profile</legend>                                 <Label htmlFor="caregiverName" className="text-right">Name</Label>
+                                <legend className="px-1 text-sm font-medium text-muted-foreground">Caregiver Profile</legend>
+                                 <Label htmlFor="caregiverName" className="text-right">Name</Label>
                                  <Input id="caregiverName" defaultValue={user.caregiverName} className="col-span-3" />
                                  <Label htmlFor="caregiverAvatar" className="text-right">Avatar URL</Label>
                                  <Input id="caregiverAvatar" defaultValue={user.caregiverAvatarUrl} className="col-span-3" />

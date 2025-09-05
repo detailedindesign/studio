@@ -47,10 +47,8 @@ export function ManageReminders() {
   const [reminderList, setReminderList] = React.useState(reminders);
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
-  // In a real app, you would handle form submission to an API
   const handleSaveChanges = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Logic to add/update reminder would go here
     console.log("Form submitted");
     setIsDialogOpen(false);
   };
