@@ -29,7 +29,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { reminders, Reminder } from "@/lib/data"
+import { reminders } from "@/lib/data"
 import { PlusCircle, MoreHorizontal } from "lucide-react"
 import { Badge } from "../ui/badge"
 import {

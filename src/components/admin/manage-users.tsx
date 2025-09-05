@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { user as initialUser, User } from "@/lib/data"
+import { user as initialUser } from "@/lib/data"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
@@ -49,7 +49,7 @@ export function ManageUsers() {
                  <div className="flex items-center gap-4">
                      <Avatar className="h-12 w-12">
                         <AvatarImage src={user.caregiverAvatarUrl} alt={user.caregiverName} />
-                        <AvatarFallback>{user.caregiverName.charAt(0)}</Fallback>
+                        <AvatarFallback>{user.caregiverName.charAt(0)}</AvatarFallback>
                     </Avatar>
                     <div>
                         <p className="font-semibold">{user.caregiverName} (Caregiver)</p>

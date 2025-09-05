@@ -30,7 +30,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { resources, Resource } from "@/lib/data"
+import { resources } from "@/lib/data"
 import { PlusCircle, MoreHorizontal } from "lucide-react"
 import { Badge } from "../ui/badge"
 import {
