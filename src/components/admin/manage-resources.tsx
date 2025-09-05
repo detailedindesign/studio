@@ -56,9 +56,12 @@ export function ManageResources() {
   };
 
   return (
-    <section>
-      <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Manage Resources</h2>
+      <Card>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div className="space-y-1.5">
+            <CardTitle>Manage Resources</CardTitle>
+            <CardDescription>Add, edit, or remove articles from the library.</CardDescription>
+          </div>
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <Button>
@@ -108,11 +111,6 @@ export function ManageResources() {
               </form>
             </DialogContent>
           </Dialog>
-      </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Resource Library</CardTitle>
-          <CardDescription>Add, edit, or remove articles from the library.</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
@@ -155,6 +153,5 @@ export function ManageResources() {
           </Table>
         </CardContent>
       </Card>
-    </section>
   )
 }

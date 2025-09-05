@@ -32,8 +32,7 @@ export function ManageUsers() {
   };
 
   return (
-    <section>
-      <Card>
+    <Card>
         <CardHeader>
           <CardTitle>Manage Users</CardTitle>
           <CardDescription>Edit user profiles and caregiver information.</CardDescription>
@@ -96,6 +95,5 @@ export function ManageUsers() {
             </div>
         </CardContent>
       </Card>
-    </section>
   )
 }

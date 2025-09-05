@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -55,9 +56,12 @@ export function ManageReminders() {
   };
 
   return (
-    <section>
-      <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Manage Reminders</h2>
+    <Card>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div className="space-y-1.5">
+            <CardTitle>Manage Reminders</CardTitle>
+            <CardDescription>Add, edit, or remove user reminders.</CardDescription>
+          </div>
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <Button>
@@ -113,12 +117,7 @@ export function ManageReminders() {
               </form>
             </DialogContent>
           </Dialog>
-      </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Reminder List</CardTitle>
-          <CardDescription>Add, edit, or remove user reminders.</CardDescription>
-        </CardHeader>
+      </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
@@ -172,6 +171,5 @@ export function ManageReminders() {
           </Table>
         </CardContent>
       </Card>
-    </section>
   )
 }
